@@ -16,16 +16,19 @@ body {
 }
 .controls {
   display: flex;
+  justify-content: space-evenly;
+  align-items: center;
   margin-bottom: 4px;
+  margin-top: 20px;
 }
-.controls__item {
+.controls-item {
   padding: 10px 20px;
   border: 1px solid gray;
   color: black;
   font-weight: 500;
   text-decoration: none;
 }
-.controls__item--active {
+.controls-item--active {
   background-color: palevioletred;
   color: white;
 }
@@ -33,7 +36,19 @@ body {
   margin-right: 4px;
 }
 .pane {
+  display: none;
   padding: 15px;
   box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
     0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+}
+.pane--active {
+  display: block;
+}
+.pane__fruit {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 48px;
+}
+.pane__text {
+  margin-bottom: 0;
 }
