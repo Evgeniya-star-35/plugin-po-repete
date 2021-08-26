@@ -21,18 +21,23 @@ body {
   margin-bottom: 4px;
   margin-top: 20px;
 }
-.controls-item {
+.control-item {
+  width: 150px;
+  height: 50px;
   padding: 10px 20px;
-  border: 1px solid gray;
+  border: 3px solid rgb(143, 9, 9);
   color: black;
   font-weight: 500;
   text-decoration: none;
+  border-radius: 60%;
 }
-.controls-item--active {
+.control-item--active {
   background-color: palevioletred;
-  color: white;
+  border-color: blueviolet;
+  box-shadow: 12px 10px 3px -1px rgba(241, 8, 241, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 }
-.controls__item:not(:last-child) {
+.control__item:not(:last-child) {
   margin-right: 4px;
 }
 .pane {
@@ -40,15 +45,29 @@ body {
   padding: 15px;
   box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
     0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  animation: fadeEffect 500 ms;
 }
 .pane--active {
   display: block;
 }
 .pane__fruit {
   margin-top: 0;
-  margin-bottom: 16px;
-  font-size: 48px;
+  margin-bottom: 20px;
+  font-size: 50px;
+  text-align: center;
 }
 .pane__text {
   margin-bottom: 0;
+  font-weight: 500;
+  font-style: italic;
+  font-size: 20px;
+  color: rgb(17, 68, 8);
+}
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
